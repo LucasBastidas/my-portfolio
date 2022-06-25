@@ -120,7 +120,7 @@ class Home extends HTMLElement {
 		this.innerHTML = `
       <header-element></header-element>
 		<div class ="yo">
-		<h1 class="h1">Hola soy Lucas</h1>
+		<h1 class="h1">Bienvenidxs..</h1>
 		</div>
 		<div class="presentation">
 		<div class="my-image-cont">
