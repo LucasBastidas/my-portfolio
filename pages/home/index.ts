@@ -109,8 +109,8 @@ class Home extends HTMLElement {
 			.projects-cont{
 				flex-direction:row;
 				flex-wrap:wrap;
-				padding-left:75px;
-				padding-right:75px;
+				padding-left:300px;
+				padding-right:300px;
 				gap:50px;
 			}
 		}
