@@ -68,8 +68,10 @@ export function initProjectCardComp() {
             <p class="description">${description}</p>
          </div>
          <div class="urls-cont">
-            <a href="${url1}" class="vermas">Ver más</a>
-            <a href="${url2}" class="vermas">${url2Title || ""}</a>
+            <a href="${url1}" class="vermas" target="_blank">Ver más</a>
+            <a href="${url2}" class="vermas" target="_blank">${
+				url2Title || ""
+			}</a>
          </div>
       </div>
          `;

@@ -17,7 +17,7 @@ export function initFooterComp() {
          .cont{
             display: flex;
             flex-direction: column;
-            
+            text-align: center;
             background-color: #172d4a;
             align-items: center;
             height: 200px;
@@ -136,7 +136,7 @@ export function initFooterComp() {
          <img class="logo_github" src="${githubLogoPng}" alt="hola"></img>
          </a>
          </div>
-         <div><img class="logo_instagram" src="${instagramLogoPng}" alt="hola"></img></div>
+         <div><span>lucaasbastidas@gmail.com</span></div>
          </div>
          </div>
          `;
