@@ -1,15 +1,15 @@
 const logoPng = require("url:../../assets/logo.png");
 const navButton = require("url:../../assets/list.png");
 export function initHeaderComp() {
-	class HeaderCompEl extends HTMLElement {
-		constructor() {
-			super();
-			this.render();
-		}
-		render() {
-			var shadow = this.attachShadow({ mode: "open" });
-			var style = document.createElement("style");
-			style.innerHTML = `
+  class HeaderCompEl extends HTMLElement {
+    constructor() {
+      super();
+      this.render();
+    }
+    render() {
+      var shadow = this.attachShadow({ mode: "open" });
+      var style = document.createElement("style");
+      style.innerHTML = `
          @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
          @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
          .cont{
@@ -40,6 +40,7 @@ export function initHeaderComp() {
             padding-right: 10px;
             font-size: 12px;
             letter-spacing: 6px;
+            cursor: default;
          }
          @media(min-width: 960px){
             .header-title{
@@ -51,7 +52,7 @@ export function initHeaderComp() {
 
          
          `;
-			shadow.innerHTML = `
+      shadow.innerHTML = `
          <div class="cont">
          <div><img class="logo" src="${logoPng}" alt="hola"></img></div>
          <div>
@@ -59,8 +60,8 @@ export function initHeaderComp() {
          </div>
          </div>
          `;
-			shadow.appendChild(style);
-		}
-	}
-	customElements.define("header-element", HeaderCompEl);
+      shadow.appendChild(style);
+    }
+  }
+  customElements.define("header-element", HeaderCompEl);
 }

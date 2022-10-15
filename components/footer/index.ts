@@ -3,15 +3,15 @@ const linkedinLogoPng = require("url:../../assets/linkedin-5-64.png");
 const githubLogoPng = require("url:../../assets/github-10-64.png");
 const instagramLogoPng = require("url:../../assets/instagram-64.png");
 export function initFooterComp() {
-	class FooterCompEl extends HTMLElement {
-		constructor() {
-			super();
-			this.render();
-		}
-		render() {
-			var shadow = this.attachShadow({ mode: "open" });
-			var style = document.createElement("style");
-			style.innerHTML = `
+  class FooterCompEl extends HTMLElement {
+    constructor() {
+      super();
+      this.render();
+    }
+    render() {
+      var shadow = this.attachShadow({ mode: "open" });
+      var style = document.createElement("style");
+      style.innerHTML = `
          @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
          @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
          .cont{
@@ -78,6 +78,9 @@ export function initFooterComp() {
          .logo_instagram:hover{
             animation: myAnim 2s ease 0s 1 normal forwards;
          }
+         .email{
+            cursor:default
+         }
          @media(min-width: 960px){
             .logo_linkedin{
                height:40px;
@@ -122,7 +125,7 @@ export function initFooterComp() {
             }
          }
          `;
-			shadow.innerHTML = `
+      shadow.innerHTML = `
          <div class="cont">
          <div><img class="logo" src="${logoPng}" alt="hola"></img></div>
          <div class="redes-cont">
@@ -136,12 +139,12 @@ export function initFooterComp() {
          <img class="logo_github" src="${githubLogoPng}" alt="hola"></img>
          </a>
          </div>
-         <div><span>lucaasbastidas@gmail.com</span></div>
+         <div><span class="email">lucaasbastidas@gmail.com</span></div>
          </div>
          </div>
          `;
-			shadow.appendChild(style);
-		}
-	}
-	customElements.define("footer-element", FooterCompEl);
+      shadow.appendChild(style);
+    }
+  }
+  customElements.define("footer-element", FooterCompEl);
 }

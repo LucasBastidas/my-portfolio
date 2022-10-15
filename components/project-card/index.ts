@@ -15,8 +15,7 @@ export function initProjectCardComp() {
 			var shadow = this.attachShadow({ mode: "open" });
 			var style = document.createElement("style");
 			style.innerHTML = `
-            .card-cont{
-               
+            .card-cont{               
                display:flex;
                flex-direction:column;
                align-items:center;
@@ -45,13 +44,16 @@ export function initProjectCardComp() {
                font-size: 25px;
                margin: 0px;
                padding-top:10px;
+               cursor: default;
             }
             .description{
                font-size: 15px;
                margin-bottom: 8px;
+               cursor: default;
+               text-align:justify;
+               color: darkgray;
             }
             .vermas{
-               
                font-size:20px;
                color: #607d8b;
             }
@@ -68,7 +70,7 @@ export function initProjectCardComp() {
             <p class="description">${description}</p>
          </div>
          <div class="urls-cont">
-            <a href="${url1}" class="vermas" target="_blank">Ver más</a>
+            <a href="${url1}" class="vermas" target="_blank">Ver Repo</a>
             <a href="${url2}" class="vermas" target="_blank">${
 				url2Title || ""
 			}</a>

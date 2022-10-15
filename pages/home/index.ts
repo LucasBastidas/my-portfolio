@@ -1,5 +1,17 @@
 const myImage = require("url:../../assets/306-3064446_developer-developer-png.png");
 const backgroundImage = require("url:../../assets/altumcode-dMUt0X3f59Q-unsplash.jpg");
+const tecnologiasImg = require("../../assets/tecnologias.jpg");
+const javascriptImg = require("../../assets/tecnologias-iconos/js.png");
+const typescriptImg = require("../../assets/tecnologias-iconos/typescript.png");
+const htmlImg = require("../../assets/tecnologias-iconos/html.png");
+const cssImage = require("../../assets/tecnologias-iconos/css.png");
+const nodeJsImg = require("../../assets/tecnologias-iconos/node-js.png");
+const postgreImg = require("../../assets/tecnologias-iconos/postgre.png");
+const firebaseImg = require("../../assets/tecnologias-iconos/firebase.svg");
+const reactJsImg = require("../../assets/tecnologias-iconos/react.png");
+const sequalizeImg = require("../../assets/tecnologias-iconos/sequelize.svg");
+const gitImg = require("../../assets/tecnologias-iconos/git.png");
+
 class Home extends HTMLElement {
 	connectedCallback() {
 		this.render();
@@ -22,11 +34,33 @@ class Home extends HTMLElement {
 			}
 		}
 		.h1{
-			background-color: #000000a6;
+			background-color:#000000bf;
 			color: #ffffffd4;
-			font-size: 50px;
-			font-family: monospace;
+			width: 0;
+			overflow: hidden;
+			white-space: nowrap;
+			font-size: 3rem;
+			margin: 10px auto;
+			 border-right: 0.15em solid #172d4a;
+			animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
 		}
+
+
+		@keyframes typing {
+			from {
+			  width: 0;
+			}
+			to {
+			  width: 100%;
+			}
+		  }
+		  @keyframes blink {
+			50% {
+			  border-color: transparent;
+			}
+		  }
+
+
 		.presentation{
 			height:360px;
 			width:100%;
@@ -64,23 +98,69 @@ class Home extends HTMLElement {
 			background-color:#607d8b;
 			font-family: monospace;
 			font-size: 15px;
+			cursor: default;
 		}
 		@media(min-width:960px){
 			.description{
 				padding-right:80px;
 				padding-left:80px;
-				font-size:25px
+				font-size:25px;
+				cursor: default;
 			}
 		}
 		.sobre-mi{
 			font-size:25px;
 			color:#344a54;
+			cursor: default;
 		}
 		@media(min-width:960px){
 			.sobre-mi {
 				font-size:60px
 			}
 		}
+
+		.tecnologias-title__cont{
+			height:300px;
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			text-align:center;
+			background: #fff url("${tecnologiasImg}")
+			center center/cover no-repeat;
+			cursor: default;       
+		}
+
+		.tecnologias-title__cont >h2{
+			font-size:40px;
+			background-color: #bbbbbbab;
+			cursor: default;
+			color:#172d4a;
+		}
+
+		.tecnologias{
+			display:flex;
+			flex-wrap: wrap;
+			gap: 80px;
+			justify-content:center;
+			padding: 100px 0;
+			background-color:#607d8b;
+		}
+
+		.icon-cont{
+			width:150px
+		}
+
+		.icon-cont img{
+			width:100%;
+			transition: all 1s;
+		}
+
+		.icon-cont img:hover{
+			transform: scale(1.2);
+			
+		}
+
+
 		.proyects-title{
 			height:500px;
 			display:flex;
@@ -88,12 +168,17 @@ class Home extends HTMLElement {
 			justify-content:center;
 			text-align:center;
 			background: #fff url(https://images.unsplash.com/photo-1526040652367-ac003a0475fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
-			) center center/cover no-repeat;       
-
+			) center center/cover no-repeat;
+			cursor: default;
+			color:#172d4a;       
 		}
+
+
+
 		.proyects-title>h2{
 			font-size:40px;
 			background-color: #dcdcdcab;
+			cursor: default;
 		}
 		.projects-cont{
 			display:flex;
@@ -120,7 +205,14 @@ class Home extends HTMLElement {
 		this.innerHTML = `
       <header-element></header-element>
 		<div class ="yo">
-		<h1 class="h1">Bienvenidxs..</h1>
+		<h1 class="h1">Lucas Bastidas,<br>
+
+
+
+
+
+		FullStack Developer..
+		</h1>
 		</div>
 		<div class="presentation">
 		<div class="my-image-cont">
@@ -128,11 +220,68 @@ class Home extends HTMLElement {
 		</div>
 		<div class="description">
 		<h2 class="sobre-mi">Sobre mi </h2>
-		<h4>Mi nombre es Lucas Bastidas, soy estudiante de Desarrollador FullStack.
-		Me considero una persona responsable y ordenada, con ganas de seguir aprendiendo.
+		<h4>Mi nombre es Lucas Bastidas, soy Desarrollador Web FullStack. Apasionado por la tecnología,
+		me considero una persona responsable y ordenada, con ganas de seguir aprendiendo.
 		Buscando mi primera experiencia laboral.</h4>
 		</div>
 		</div>
+
+		<section>
+
+		<div class="tecnologias-cont">
+		<div class="tecnologias-title__cont">
+
+		<h2>Tecnologías</h2>
+
+		</div>
+		<div class="tecnologias">
+
+		<div class="icon-cont">
+			<img src=${javascriptImg} alt="">
+		</div>
+
+		<div class="icon-cont">
+			<img src=${typescriptImg} alt="">
+		</div>
+
+		<div class="icon-cont">
+			<img src=${htmlImg} alt="">
+		</div>
+
+		<div class="icon-cont">
+			<img src=${cssImage} alt="">
+		</div>
+
+		<div class="icon-cont">
+			<img src=${nodeJsImg} alt="">
+		</div>
+
+		<div class="icon-cont">
+			<img src=${reactJsImg} alt="">
+		</div>
+
+		<div class="icon-cont">
+			<img src=${firebaseImg} alt="">
+		</div>
+
+		<div class="icon-cont">
+			<img src=${postgreImg} alt="">
+		</div>
+
+		<div class="icon-cont">
+			<img src=${sequalizeImg} alt="">
+		</div>
+
+		<div class="icon-cont">
+			<img src=${gitImg} alt="">
+		</div>
+
+		</div>	
+		</div>
+
+		</section>
+
+		<section>
 		<div class="proyects-title">
 		<h2>Mis Proyectos</h2>
 		</div>
@@ -153,7 +302,12 @@ class Home extends HTMLElement {
 		
 		
 		<x-project-card title="Directorio de mascotas" imageUrl="https://cdn.sanity.io/images/9ihg87o9/production/ceb4612f5c545b4eb91213708e9f9dce1d58bda2-312x165.png" description="Webapp donde podrás reportar mascotas perdidas. Exploré patrones conocidos como MVC y REST además de entender cómo funcionan las bases de datos relacionales.Además diseñé un sistema de autenticación e integré servicios como Algolia y Mapbox para integrar geolocalización en el sistema." url="https://github.com/LucasBastidas/lost-pets-app-v1" url2="https://lost-pets-app-v1.herokuapp.com" ></x-project-card>
+		
+		
+		
+		<x-project-card title="Directorio de mascotas v2 (React)" imageUrl="https://cdn.sanity.io/images/9ihg87o9/production/bbfa437c8a52749a2c02f22abfc8af63c0fee5ac-312x165.png" description="Planteé un nuevo front para la aplicación de mascotas perdidas. El foco era practicar con React. Se  profundiza en la arquitectura basada en capas y el uso de componentes de forma escalable. Empecé a usar hooks y a entender los beneficios de la programación reactiva. Esta vez utilicé Firebase como host." url="https://github.com/LucasBastidas/lost-pets-v2-react" url2="https://lost-pets-app-v2-react.firebaseapp.com/" ></x-project-card>
 		</div>
+		</section>
 		<footer-element class="footer"></footer-element>
       `;
 		this.appendChild(style);
