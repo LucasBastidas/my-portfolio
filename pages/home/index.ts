@@ -11,6 +11,7 @@ const firebaseImg = require("../../assets/tecnologias-iconos/firebase.svg");
 const reactJsImg = require("../../assets/tecnologias-iconos/react.png");
 const sequalizeImg = require("../../assets/tecnologias-iconos/sequelize.svg");
 const gitImg = require("../../assets/tecnologias-iconos/git.png");
+const nextJsIcon = require("../../assets/tecnologias-iconos/nextjs-icon.svg");
 
 class Home extends HTMLElement {
 	connectedCallback() {
@@ -237,43 +238,47 @@ class Home extends HTMLElement {
 		<div class="tecnologias">
 
 		<div class="icon-cont">
-			<img src=${javascriptImg} alt="">
+			<img src=${javascriptImg} alt="javascript logo">
 		</div>
 
 		<div class="icon-cont">
-			<img src=${typescriptImg} alt="">
+			<img src=${typescriptImg} alt="typescript logo">
 		</div>
 
 		<div class="icon-cont">
-			<img src=${htmlImg} alt="">
+			<img src=${htmlImg} alt="html5 logo">
 		</div>
 
 		<div class="icon-cont">
-			<img src=${cssImage} alt="">
+			<img src=${cssImage} alt="css3 logo">
 		</div>
 
 		<div class="icon-cont">
-			<img src=${nodeJsImg} alt="">
+			<img src=${nodeJsImg} alt="nodejs logo">
 		</div>
 
 		<div class="icon-cont">
-			<img src=${reactJsImg} alt="">
+			<img src=${reactJsImg} alt="reactjs logo">
 		</div>
 
 		<div class="icon-cont">
-			<img src=${firebaseImg} alt="">
+			<img src=${firebaseImg} alt="firebase logo">
 		</div>
 
 		<div class="icon-cont">
-			<img src=${postgreImg} alt="">
+			<img src=${postgreImg} alt="postgre logo">
 		</div>
 
 		<div class="icon-cont">
-			<img src=${sequalizeImg} alt="">
+			<img src=${sequalizeImg} alt="sequelize logo">
 		</div>
 
 		<div class="icon-cont">
-			<img src=${gitImg} alt="">
+			<img src=${gitImg} alt="git logo">
+		</div>
+
+		<div class="icon-cont">
+			<img src=${nextJsIcon} alt="nextjs logo">
 		</div>
 
 		</div>	
@@ -306,6 +311,10 @@ class Home extends HTMLElement {
 		
 		
 		<x-project-card title="Directorio de mascotas v2 (React)" imageUrl="https://cdn.sanity.io/images/9ihg87o9/production/bbfa437c8a52749a2c02f22abfc8af63c0fee5ac-312x165.png" description="Planteé un nuevo front para la aplicación de mascotas perdidas. El foco era practicar con React. Se  profundiza en la arquitectura basada en capas y el uso de componentes de forma escalable. Empecé a usar hooks y a entender los beneficios de la programación reactiva. Esta vez utilicé Firebase como host." url="https://github.com/LucasBastidas/lost-pets-v2-react" url2="https://lost-pets-app-v2-react.firebaseapp.com/" ></x-project-card>
+
+		<x-project-card title="E-Commerece (Desarrollo Frontend)" imageUrl="https://cdn.sanity.io/images/9ihg87o9/production/aa8ec638489af74fd24e7b508833cf3a93b2a9b8-312x165.png" description="Frontend de un e-commerce. El foco de este proyecto está en profundizar conceptos de React y sus herramientas como Next.js y Vercel. También trabajé una arquitectura basada en capas, server-side-rendering y la performance de la web." url="https://github.com/LucasBastidas/ecommerce-fe" url2="https://ecommerce-fe-eosin.vercel.app/" ></x-project-card>
+
+
 		</div>
 		</section>
 		<footer-element class="footer"></footer-element>
