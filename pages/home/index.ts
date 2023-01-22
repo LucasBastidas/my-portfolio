@@ -306,8 +306,7 @@ class Home extends HTMLElement {
 		<div class="description">
 		<h2 class="sobre-mi">Sobre mi </h2>
 		<h4>Mi nombre es Lucas Bastidas, soy Desarrollador Web FullStack. Apasionado por la tecnología,
-		me considero una persona responsable y ordenada, con ganas de seguir aprendiendo.
-		Buscando mi primera experiencia laboral.</h4>
+		me considero una persona responsable y ordenada, con ganas muchas de seguir aprendiendo y avanzar en mi carrera profesional.</h4>
 		</div>
 		</div>
 
